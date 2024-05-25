@@ -1,0 +1,27 @@
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Script1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+     System.setProperty("webdriver.firefox.driver"," D:\\.geckodriver.exe");
+     FirefoxDriver rv=new FirefoxDriver();
+      
+     rv.get("http://www.google.com");
+     String expected_page="google";
+     
+     if(title.equals (expected_page))
+     {
+    	 System.out.println("google page displayed");
+     }
+     else
+     {
+    	 System.out.println("google page not displayed");
+     }
+	}
+
+	}
+
+

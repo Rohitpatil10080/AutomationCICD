@@ -1,0 +1,26 @@
+package ListWebHandling;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SignUp_page {
+
+	public static void main(String[] args) {
+		
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.amazon.in");
+		driver.findElement(By.id("nav-link-accountList")).click();
+		driver.findElement(By.id("createAccountSubmit")).click();
+		driver.findElement(By.id("ap_customer_name")).sendKeys("rohit");
+		driver.findElement(By.id("ap_phone_number")).sendKeys("9545823216");
+		driver.findElement(By.id("ap_email")).sendKeys("rohitpatil1067@gmail.com");
+		driver.findElement(By.id("ap_password")).sendKeys("Rohit3680#");
+		driver.findElement(By.id("continue")).click();
+		
+	}
+
+}

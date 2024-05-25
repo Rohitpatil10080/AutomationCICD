@@ -1,0 +1,39 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Script24 {
+
+	private static Object enter_email;
+	private static boolean enter;
+	private static boolean mail;
+	private static boolean Re;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriverManager.firefoxdriver().setup();
+		
+		WebDriver driver=new FirefoxDriver();
+		
+		driver.get("https://touch.facebook.com/");
+		
+		driver.findElement(By.linkText("Create a new account")).click();
+		
+		WebElement email=driver.findElement(By.name("text"));
+		
+		email.sendKeys("admin@xyz.com");
+	    
+		boolean enter=email.isDisplayed();
+		
+		if(email)
+		{
+			
+		}
+
+	}
+
+}

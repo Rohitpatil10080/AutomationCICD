@@ -1,0 +1,46 @@
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ActitimePrintReport {
+
+	public static void main(String[] args) throws InterruptedException {
+		 WebDriverManager.firefoxdriver().setup();
+		  WebDriver driver=new FirefoxDriver();
+		  driver.get("https://demo.actitime.com/login.do");
+		  Thread.sleep(3000);
+		  driver.findElement(By.id("username")).sendKeys("admin");
+		  Thread.sleep(3000);
+		  driver.findElement(By.name("pwd")).sendKeys("manager");
+		  Thread.sleep(3000);
+		  driver.findElement(By.name("remember")).click();
+		  Thread.sleep(3000);
+		  driver.findElement(By.id("loginButtonContainer")).click();
+		  Thread.sleep(3000);
+		   WebElement rv = driver.findElement(By.xpath(".//a[@class='content reports']"));
+		   
+			Thread.sleep(3000);
+			Actions a=new Actions(driver);
+			a.moveToElement(rv).perform();
+			rv.click();
+		
+		 
+		
+		   
+		  
+		  
+		  
+		  Thread.sleep(3000);
+		  driver.findElement(By.xpath("(.//table[@class='configItemContainer  TIME  enabled'])[3]")).click();
+		
+		
+	}
+
+}

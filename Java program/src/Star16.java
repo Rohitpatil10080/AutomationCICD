@@ -1,0 +1,35 @@
+
+public class Star16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println("program started");
+		
+		int lines=5;
+		int starCount=5;
+		int mid=(lines+1)/2;
+		
+		for (int i=1; i<=lines; i++)
+		{
+			for (int j=1; j<=starCount; j++)
+			{
+				if (i==j||i+j==6)
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+          System.out.println("program ended");
+	}
+
+
+
+
+	}
+
+
